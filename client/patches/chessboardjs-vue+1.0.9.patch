@@ -10,7 +10,7 @@ new mode 100755
 diff --git a/node_modules/chessboardjs-vue/index.js b/node_modules/chessboardjs-vue/index.js
 old mode 100644
 new mode 100755
-index 404e749..0eb90b6
+index 404e749..d399bac
 --- a/node_modules/chessboardjs-vue/index.js
 +++ b/node_modules/chessboardjs-vue/index.js
 @@ -8,9 +8,11 @@
@@ -28,10 +28,11 @@ index 404e749..0eb90b6
  var link = document.createElement('link');  
  
        // set the attributes for link element 
-@@ -1863,3 +1865,4 @@ window['ChessBoard'] = window['Chessboard']
+@@ -1863,3 +1865,5 @@ window['ChessBoard'] = window['Chessboard']
  window['Chessboard']['fenToObj'] = fenToObj
  window['Chessboard']['objToFen'] = objToFen
  
++
 +
 diff --git a/node_modules/chessboardjs-vue/wikipedia/bB.png b/node_modules/chessboardjs-vue/wikipedia/bB.png
 old mode 100644
