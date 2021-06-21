@@ -1,0 +1,48 @@
+diff --git a/node_modules/chessboardjs-vue/.vscode/launch.json b/node_modules/chessboardjs-vue/.vscode/launch.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/chessboardjs-vue/README.md b/node_modules/chessboardjs-vue/README.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/chessboardjs-vue/chessboard-1.0.0.css b/node_modules/chessboardjs-vue/chessboard-1.0.0.css
+old mode 100644
+new mode 100755
+diff --git a/node_modules/chessboardjs-vue/index.js b/node_modules/chessboardjs-vue/index.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/chessboardjs-vue/wikipedia/bB.png b/node_modules/chessboardjs-vue/wikipedia/bB.png
+old mode 100644
+new mode 100755
+diff --git a/node_modules/chessboardjs-vue/wikipedia/bK.png b/node_modules/chessboardjs-vue/wikipedia/bK.png
+old mode 100644
+new mode 100755
+diff --git a/node_modules/chessboardjs-vue/wikipedia/bN.png b/node_modules/chessboardjs-vue/wikipedia/bN.png
+old mode 100644
+new mode 100755
+diff --git a/node_modules/chessboardjs-vue/wikipedia/bP.png b/node_modules/chessboardjs-vue/wikipedia/bP.png
+old mode 100644
+new mode 100755
+diff --git a/node_modules/chessboardjs-vue/wikipedia/bQ.png b/node_modules/chessboardjs-vue/wikipedia/bQ.png
+old mode 100644
+new mode 100755
+diff --git a/node_modules/chessboardjs-vue/wikipedia/bR.png b/node_modules/chessboardjs-vue/wikipedia/bR.png
+old mode 100644
+new mode 100755
+diff --git a/node_modules/chessboardjs-vue/wikipedia/wB.png b/node_modules/chessboardjs-vue/wikipedia/wB.png
+old mode 100644
+new mode 100755
+diff --git a/node_modules/chessboardjs-vue/wikipedia/wK.png b/node_modules/chessboardjs-vue/wikipedia/wK.png
+old mode 100644
+new mode 100755
+diff --git a/node_modules/chessboardjs-vue/wikipedia/wN.png b/node_modules/chessboardjs-vue/wikipedia/wN.png
+old mode 100644
+new mode 100755
+diff --git a/node_modules/chessboardjs-vue/wikipedia/wP.png b/node_modules/chessboardjs-vue/wikipedia/wP.png
+old mode 100644
+new mode 100755
+diff --git a/node_modules/chessboardjs-vue/wikipedia/wQ.png b/node_modules/chessboardjs-vue/wikipedia/wQ.png
+old mode 100644
+new mode 100755
+diff --git a/node_modules/chessboardjs-vue/wikipedia/wR.png b/node_modules/chessboardjs-vue/wikipedia/wR.png
+old mode 100644
+new mode 100755
