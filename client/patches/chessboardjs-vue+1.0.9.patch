@@ -10,10 +10,10 @@ new mode 100755
 diff --git a/node_modules/chessboardjs-vue/index.js b/node_modules/chessboardjs-vue/index.js
 old mode 100644
 new mode 100755
-index 404e749..41fcae9
+index 404e749..0288e1a
 --- a/node_modules/chessboardjs-vue/index.js
 +++ b/node_modules/chessboardjs-vue/index.js
-@@ -8,9 +8,12 @@
+@@ -8,13 +8,16 @@
  // start anonymous scope
  
  'use strict'
@@ -25,10 +25,15 @@ index 404e749..41fcae9
 +// var cssfile = require('./chessboard-1.0.0.css')
 +
 +var $ = require('jquery');
-+var cssfile = './chessboard-1.0.0.css';
++var cssfile = 'chessboard-1.0.0.css';
  var link = document.createElement('link');  
  
        // set the attributes for link element 
+-         link.rel = 'stylesheet';  
++      link.rel = 'stylesheet';  
+     
+       link.type = 'text/css'; 
+     
 @@ -590,7 +593,7 @@ function expandConfig (config) {
    if (!config.hasOwnProperty('pieceTheme') ||
        (!isString(config.pieceTheme) && !isFunction(config.pieceTheme))) {
