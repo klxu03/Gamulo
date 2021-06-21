@@ -10,7 +10,7 @@ new mode 100755
 diff --git a/node_modules/chessboardjs-vue/index.js b/node_modules/chessboardjs-vue/index.js
 old mode 100644
 new mode 100755
-index 404e749..07e2723
+index 404e749..41fcae9
 --- a/node_modules/chessboardjs-vue/index.js
 +++ b/node_modules/chessboardjs-vue/index.js
 @@ -8,9 +8,12 @@
@@ -18,16 +18,26 @@ index 404e749..07e2723
  
  'use strict'
 -global.jQuery = require('jquery');
+-var $ = global.jQuery;
+-var cssfile = require('./chessboard-1.0.0.css')
 +// global.jQuery = require('jquery');
 +// var $ = global.jQuery;
 +// var cssfile = require('./chessboard-1.0.0.css')
 +
- var $ = global.jQuery;
--var cssfile = require('./chessboard-1.0.0.css')
++var $ = require('jquery');
 +var cssfile = './chessboard-1.0.0.css';
  var link = document.createElement('link');  
  
        // set the attributes for link element 
+@@ -590,7 +593,7 @@ function expandConfig (config) {
+   if (!config.hasOwnProperty('pieceTheme') ||
+       (!isString(config.pieceTheme) && !isFunction(config.pieceTheme))) {
+     config.pieceTheme =  function piecelink(piece){
+-              return require('./wikipedia/' + piece + '.png') 
++              return './wikipedia/' + piece + '.png' 
+               
+            }
+   }
 diff --git a/node_modules/chessboardjs-vue/wikipedia/bB.png b/node_modules/chessboardjs-vue/wikipedia/bB.png
 old mode 100644
 new mode 100755
