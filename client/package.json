@@ -3,9 +3,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "postinstall": "patch-package"
   },
   "dependencies": {
+    "chessboardjs-vue": "^1.0.9",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
     "vue": "^3.0.5"
   },
   "devDependencies": {
