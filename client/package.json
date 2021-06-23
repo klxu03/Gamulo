@@ -1,13 +1,15 @@
 {
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --force",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "postinstall": "patch-package"
   },
   "dependencies": {
+    "chess.js": "^0.12.0",
     "chessboardjs-vue": "^1.0.9",
+    "jquery": "^3.6.0",
     "patch-package": "^6.4.7",
     "postinstall-postinstall": "^2.1.0",
     "vue": "^3.0.5"
