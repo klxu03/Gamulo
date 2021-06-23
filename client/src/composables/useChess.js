@@ -32,7 +32,7 @@ export default function useChess(
         return 'snapback';
       }
 
-      renderMoveHistory(game.history());
+      renderMoveHistory(game.history(), true);
       window.setTimeout(makeBestMove, 250);
     };
 

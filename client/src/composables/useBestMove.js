@@ -1,6 +1,14 @@
+import { toRef } from 'vue';
 import $ from 'jquery';
 
-export default function useBestMove(boardObject, game, renderMoveHistory) {
+export default function useBestMove(
+  boardObject,
+  game,
+  renderMoveHistory,
+  getDepth,
+  positionCount,
+  time
+) {
   // The first, root case. Do the first depth right here
   var minimaxRoot = function (depth, game, isMaximisingPlayer) {
     var newGameMoves = game.moves();
@@ -23,7 +31,7 @@ export default function useBestMove(boardObject, game, renderMoveHistory) {
   };
 
   var minimax = function (depth, game, alpha, beta, isMaximisingPlayer) {
-    positionCount++; // Literally something just for the data at the bottom
+    positionCount.value++; // Literally something just for the data at the bottom
 
     if (depth === 0) {
       // Base case of this recursion
@@ -210,40 +218,52 @@ export default function useBestMove(boardObject, game, renderMoveHistory) {
 
   var makeBestMove = function () {
     var bestMove = getBestMove(game);
-    console.log('bestMove', bestMove); // Shown in a form from ASCII number to another ASCII number
+    // console.log('bestMove', bestMove); // Shown in a form from ASCII number to another ASCII number
 
     // Should uncomment the line under me and comment 2 lines under
-    // game.ugly_move(bestMove);
-    console.log('game.move(bestMove);', game.move(bestMove)); // Actually go ahead and make the move using the ugly_move(move) function
+    // console.log('game.move(bestMove);', game.move(bestMove)); // Actually go ahead and make the move using the ugly_move(move) function
+    game.move(bestMove);
 
     // game.fen() goes ahead and generates the board configuration with Forsynth-Edwards Notation
 
     boardObject.board.position(game.fen());
 
-    console.log('boardObject.board.position', boardObject.board.position);
+    // console.log('boardObject.board.position', boardObject.board.position);
 
-    renderMoveHistory(game.history()); // After the bot makes a move, render it into the move history and add it into the table
+    renderMoveHistory(game.history(), false); // After the bot makes a move, render it into the move history and add it into the table
     if (game.game_over()) {
       alert('Game over, the bot won');
     }
   };
 
-  let positionCount;
   var getBestMove = function (game) {
     if (game.game_over()) {
       alert('Game over, you won!');
     }
 
-    positionCount = 0;
     // const depth = parseInt($('#search-depth').find(':selected').text());
-    const depth = 3;
+    // console.log('depth', depth);
+    const depth = getDepth();
+    // console.log('depth', depth);
+
+    positionCount.value = 0;
 
     const d = new Date().getTime();
     const bestMove = minimaxRoot(depth, game, true);
     const d2 = new Date().getTime();
     const moveTime = d2 - d;
-    $('#position-count').text(positionCount);
-    $('#time').text(moveTime / 1000 + 's');
+
+    time.move = moveTime;
+    time.left -= moveTime;
+
+    // console.log(
+    //   'positionCount.value',
+    //   positionCount.value,
+    //   'moveTime',
+    //   moveTime
+    // );
+    // $('#position-count').text(positionCount);
+    // $('#time').text(moveTime / 1000 + 's');
 
     return bestMove;
   };
