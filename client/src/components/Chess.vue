@@ -11,8 +11,8 @@
       <th>Black (Bot)</th>
     </tr>
     <tr v-for="(move, i) in moves" :key="i">
-      <th>{{ move[i].player }}</th>
-      <th>{{ move[i].bot }}</th>
+      <th>{{ move.player }}</th>
+      <th>{{ move.bot }}</th>
     </tr>
   </table>
 </template>
@@ -52,8 +52,8 @@ export default defineComponent({
       const latestMove = input[input.length - 1];
       console.log('Move played', latestMove);
       let move = {
-        player: '-',
-        bot: '-',
+        player: null,
+        bot: null,
       };
       if (isPlayer) {
         move.player = latestMove;
