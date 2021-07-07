@@ -14,6 +14,11 @@
       <th>{{ move.player }}</th>
       <th>{{ move.bot }}</th>
     </tr>
+    <!-- Smart Leon way that is commented out in <script> -->
+    <!-- <tr v-for="i in Math.ceil(moves.length / 2)" :key="i">
+      <th>{{ moves[2 * (i - 1)] }}</th>
+      <th>{{ moves[2 * (i - 1) + 1] }}</th>
+    </tr> -->
   </table>
 </template>
 
@@ -68,6 +73,9 @@ export default defineComponent({
         moves.value.pop();
         moves.value.push(move);
       }
+
+      // For the smarter Leon way that is commented out in <template> above
+      // moves.value = input;
       console.log('moves.value', moves.value);
     };
 
